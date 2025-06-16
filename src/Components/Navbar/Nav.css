@@ -1,0 +1,270 @@
+/* ===== Base Setup ===== */
+header {
+  width: 100%;
+  background: linear-gradient(90deg, #0f766e, #2dd4bf); /* teal shades */
+  box-shadow: 0 4px 20px rgba(13, 148, 136, 0.4);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: "Segoe UI", sans-serif;
+  transition: background 0.3s ease;
+}
+
+/* ===== TOP ===== */
+.nav-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  flex-wrap: wrap;
+}
+
+.logo a {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.logo span {
+  color: #fbbf24; /* amber */
+}
+
+/* ===== NAV MENU ===== */
+.nav-menu {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: 0.3s;
+}
+
+.nav-menu li:hover a,
+.nav-menu li a.active {
+  background: #fbbf24;
+  color: #0f172a;
+  padding: 6px 14px;
+  border-radius: 8px;
+}
+
+/* ===== TOGGLE / DARK ===== */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.dark-toggle {
+  font-size: 1.2rem;
+  padding: 6px;
+  border-radius: 50%;
+  background-color: #fbbf24;
+  color: #0f172a;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dark-mode .dark-toggle {
+  background: #0ea5e9;
+  color: #ffffff;
+}
+
+/* ===== MENU TOGGLE ===== */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* ===== BOTTOM ===== */
+.nav-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9fafb;
+  padding: 10px 20px;
+  gap: 10px;
+}
+
+.search-box {
+  flex: 1;
+  display: flex;
+  max-width: 600px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 2px solid #0f766e;
+  border-right: none;
+  border-radius: 6px 0 0 6px;
+  outline: none;
+  background-color: #ffffff;
+  color: #0f172a;
+  font-weight: 500;
+}
+
+.search-box button {
+  padding: 8px 14px;
+  background: #0f766e;
+  color: white;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.search-box button:hover {
+  background: #115e59;
+}
+
+.icon-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  font-size: 1.6rem;
+  color: #334155;
+}
+
+.icon-list li {
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.icon-list li:hover {
+  color: #0f766e;
+  transform: scale(1.1);
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: #ef4444;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 999px;
+}
+
+/* ===== Side Drawer ===== */
+.side-drawer {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 200px;
+  height: 100%;
+  background: linear-gradient(180deg, #ccfbf1, #99f6e4);
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  transition: 0.3s;
+  z-index: 999;
+}
+
+.side-drawer.open {
+  left: 0;
+}
+
+.close-btn {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #0f766e;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+}
+
+.mobile-menu li a {
+  text-decoration: none;
+  color: #1e293b;
+  font-size: 1.15rem;
+}
+
+/* ===== DARK MODE SUPPORT ===== */
+.dark-mode header {
+  background: linear-gradient(90deg, #0f172a, #1e293b);
+  box-shadow: 0 4px 12px rgba(30, 41, 59, 0.6);
+}
+
+.dark-mode .nav-menu li a {
+  color: #e2e8f0;
+}
+
+.dark-mode .nav-menu li:hover a,
+.dark-mode .nav-menu li a.active {
+  background: #fbbf24;
+  color: #0f172a;
+}
+
+.dark-mode .nav-bottom {
+  background: #1e293b;
+}
+
+.dark-mode .search-box input {
+  background: #334155;
+  border-color: #2dd4bf;
+  color: #e2e8f0;
+}
+
+.dark-mode .search-box button {
+  background: #2dd4bf;
+}
+
+.dark-mode .icon-list {
+  color: #cbd5e1;
+}
+
+.dark-mode .side-drawer {
+  background: linear-gradient(180deg, #0f172a, #1e293b);
+}
+
+.dark-mode .mobile-menu li a {
+  color: #e2e8f0;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .desktop-menu {
+    display: none;
+  }
+
+  .nav-bottom {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .icon-list {
+    justify-content: flex-end;
+    font-size: 1.6rem;
+  }
+}

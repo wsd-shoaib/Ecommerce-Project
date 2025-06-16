@@ -1,0 +1,125 @@
+/* 🌐 Wrapper Section */
+.signin-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: #f3f4f6;
+  transition: background 0.3s ease;
+}
+
+/* 📦 Inner Container */
+.signin-inner {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+/* 🔐 Sign In Card */
+.signin-card {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.signin-card h2 {
+  margin-bottom: 20px;
+  color: #1f2937;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.signin-card input {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+  font-size: 15px;
+  background: #fff;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.signin-card input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+.signin-card button {
+  width: 100%;
+  padding: 12px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.signin-card button:hover {
+  background: #1d4ed8;
+}
+
+/* 🌙 Dark Mode */
+.dark-mode .signin-wrapper {
+  background: #0f172a;
+}
+
+.dark-mode .signin-card {
+  background: #1e293b;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode .signin-card h2 {
+  color: #f8fafc;
+}
+
+.dark-mode .signin-card input {
+  background: #334155;
+  color: #e2e8f0;
+  border: 1px solid #475569;
+}
+
+.dark-mode .signin-card input::placeholder {
+  color: #94a3b8;
+}
+
+.dark-mode .signin-card button {
+  background: #0ea5e9;
+}
+
+.dark-mode .signin-card button:hover {
+  background: #0284c7;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 480px) {
+  .signin-card {
+    padding: 30px 20px;
+  }
+
+  .signin-card h2 {
+    font-size: 22px;
+  }
+
+  .signin-card input,
+  .signin-card button {
+    font-size: 14px;
+  }
+
+  .signin-inner {
+    gap: 20px;
+  }
+}

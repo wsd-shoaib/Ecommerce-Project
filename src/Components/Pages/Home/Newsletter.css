@@ -1,0 +1,106 @@
+/* ===== Newsletter Base Styles ===== */
+.newsletter-section {
+  padding: 80px 10%;
+  background-color: #ffece2;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.newsletter-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.newsletter-container h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #0f172a;
+}
+
+.newsletter-container p {
+  font-size: 1.1rem;
+  color: #475569;
+  margin-bottom: 30px;
+}
+
+/* ===== Newsletter Form ===== */
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.newsletter-form input {
+  width: 100%;
+  max-width: 400px;
+  padding: 14px 18px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: #ffffff;
+  color: #0f172a;
+}
+
+.newsletter-form input:focus {
+  border-color: #ff6f3c;
+  box-shadow: 0 0 0 3px rgba(255, 111, 60, 0.2);
+}
+
+.newsletter-form button {
+  padding: 14px 28px;
+  background-color: #ff6f3c;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: #e65922;
+  transform: translateY(-2px);
+}
+
+/* ===== Dark Mode Support ===== */
+.dark-mode .newsletter-section {
+  background-color: #1e293b;
+  color: #f1f5f9;
+}
+
+.dark-mode .newsletter-container h2 {
+  color: #e2e8f0;
+}
+
+.dark-mode .newsletter-container p {
+  color: #cbd5e1;
+}
+
+.dark-mode .newsletter-form input {
+  background-color: #334155;
+  border-color: #475569;
+  color: #e2e8f0;
+}
+
+.dark-mode .newsletter-form input::placeholder {
+  color: #cbd5e1;
+}
+
+.dark-mode .newsletter-form input:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.3);
+}
+
+.dark-mode .newsletter-form button {
+  background-color: #38bdf8;
+  color: #0f172a;
+}
+
+.dark-mode .newsletter-form button:hover {
+  background-color: #0ea5e9;
+}

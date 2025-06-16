@@ -1,0 +1,88 @@
+/* ===== Base About Section ===== */
+.about-section {
+  padding: 60px 20px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== Container Layout ===== */
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* ===== Image Styling ===== */
+.about-image {
+  flex: 1 1 480px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease;
+  object-fit: cover;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+/* ===== Text Content ===== */
+.about-text {
+  flex: 1 1 480px;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  margin-bottom: 16px;
+  color: var(--text-color-secondary);
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+  }
+}
+
+/* ===== Light Theme ===== */
+:root {
+  --bg-color: #f9fafb;
+  --text-color: #111827;
+  --text-color-secondary: #374151;
+  --primary-color: #2563eb;
+}
+
+/* ===== Dark Mode Theme ===== */
+body.dark-mode {
+  --bg-color: #0f172a;
+  --text-color: #f1f5f9;
+  --text-color-secondary: #94a3b8;
+  --primary-color: #60a5fa;
+}
