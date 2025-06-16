@@ -6,7 +6,7 @@ Shop House is a clean and modern React-based front-end e-commerce UI template. I
 
 ## 🔗 Live Demo
 
-[👉 View Live](https://your-live-link.netlify.app)
+[👉 View Live](https://shophouse-app.netlify.app/)
 
 ---
 
